@@ -9,7 +9,6 @@
 .column {
   float: left;
   padding: 10px;
-
   text-align: center;/* Should be removed. Only for demonstration */
  }  
  .kit{
@@ -22,13 +21,16 @@
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
- 
-}
-
+    content: "";
+    display: table;
+    clear: both;
+   
+  }
 .content{
     text-align: center ;
+}
+.bun{
+    color: chocolate ;
+    border-radius: 20%;
 }
 

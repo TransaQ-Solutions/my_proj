@@ -1,93 +1,10 @@
-<div class="free">
 
-  <div class="content">
-    <h1>{{title}}</h1>
-    <form [formGroup]="myForm" (ngSubmit)="myForm.valid && onSubmit()" noval>
-      <div class="fields">
-      <div class="row">
-          <div class="column">Username</div>
-          <div class="column kit"><input type="text" formControlName="username" [(ngModel)]="username" >
-            <div class="error" *ngIf="myForm.controls.username.touched && !myForm.controls.username.valid">Please enter Username</div>
-          </div>
-      </div>
-  
-  
-        <div class="row">
-            <div class="column">email Id</div>
-            <div class="column kit" ><input type="text" formControlName="email" [(ngModel)]="email" >
-              <div class="error" *ngIf="myForm.controls.email.touched && !myForm.controls.email.valid">please enter Email id</div>
-            </div>
-            
-        </div>
-        
-        <div class="row">
-            <div class="column">Password</div>
-            <div class="column kit" ><input type="text" formControlName="password"  [(ngModel)]="password" >
-              <div class="error" *ngIf="myForm.controls.password.touched && !myForm.controls.password.valid">please enter Password</div>
-            </div>
-            <!-- <div class="error" *ngIf="myForm.controls.password.minlength">min length is req</div> -->
-        </div>
-  
-         <div class="row">
-          <div class="column">Confirm Password</div>
-          <div class="column kit">
-            <input type="text" formControlName="conpassword"  [(ngModel)]="conpassword" >
-            <div class="error" *ngIf="myForm.controls.conpassword.touched && !myForm.controls.conpassword.valid">please enter Password</div>
-            <p class="error">{{message}}</p> 
-          </div>
-          
-      </div>  
-      <!-- <p class="error">{{message}}</p> -->
-<!-- 
-      <div class="row">
-        <div class="column">mobile no</div>
-        <div class="column"><input type="text" formControlName="mobileno" [(ngModel)]="mobileno" >
-          <div class="error" *ngIf="myForm.controls.mobileno.touched && !myForm.controls.mobileno.valid">Please enter Username</div>
-        </div>
-        
-    </div> -->
+<div class="firstpage">
+  <h1>Home page</h1>
+</div>
+<nav>
+  <button routerLink="/registration">Registration</button>
+  <button routerLink="/login"> Login</button>
+</nav>
 
-    <!-- <div class="form-group">
-      <label>Password*</label>
-      <input class="form-control" formControlName="password" type="password" />
-    </div>
-    <div class="error-messages">
-      <ng-container *ngFor="let error of error_messages.password">
-        <div class="error-message" *ngIf="MyFOrm.get('password').hasError(error.type) && (myForm.get('password').dirty || loginForm.get('password').touched)">
-          {{ error.message }}
-        </div>
-      </ng-container>
-    </div>
-
-    <div class="form-group">
-      <label>Confirm Password*</label>
-      <input class="form-control" formControlName="confirmpassword" type="password" />
-    </div>
-    <div class="error-messages">
-      <ng-container *ngFor="let error of error_messages.confirmpassword">
-        <div class="error-message" *ngIf="myForm.get('confirmpassword').hasError(error.type) && (myForm.get('confirmpassword').dirty || loginForm.get('confirmpassword').touched)">
-          {{ error.message }}
-        </div>
-      </ng-container>
-    </div> -->
-  
-        <div class="row">
-          <div class="column">Mobile No</div>
-          <div class="column kit" ><input type="number" formControlName="mobileno" [(ngModel)]="mobileno">
-            <div class="error" *ngIf="myForm.controls.mobileno.touched && !myForm.controls.mobileno.valid">Please enter mobile no with +91</div>
-          </div>
-      </div>
-  
-      <div class="content">
-        <button type="submit" [disabled]="!myForm.valid" >Submit</button>
-    </div>
-       
-      </div>
-    </form>
-    
-  <!-- <p>{{message}}</p> -->
-    <p>
-        Form Status: {{ myForm.value | json}}
-    </p>
-  </div>
-  </div>
+<router-outlet></router-outlet>
