@@ -1,0 +1,38 @@
+.demo{
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1px solid blue;
+    height: 250px;
+}
+.error{
+    color: red;
+}
+.column {
+  float: left;
+  padding: 10px;
+
+  text-align: center;/* Should be removed. Only for demonstration */
+ }  
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+   
+  }
+  .kit{
+    float: right;
+    margin-right: 100px;
+}
+.content{
+    text-align: center ;
+}
+.bun{
+    background-color: tan;
+    color: black;
+    border-radius: 30%;
+    height: 29px;
+}
+
+    .fields{
+        margin-left: 93px;
+    }
