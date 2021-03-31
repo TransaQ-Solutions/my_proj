@@ -1,19 +1,18 @@
-<p>login works!</p>
 <div class="demo">
 
     <div class="content">
-        <h1>Login </h1>
+        <h1 style="color:cyan;background-color: darkblue;margin-top: auto;">Login Page</h1>
         <form [formGroup]="myForm" (ngSubmit)="myForm.valid && onSubmit()" noval>
             <div class="fields">
             <div class="row">
-                <div class="column">emailid</div>
-                <div class="column kit"><input type="text" formControlName="email id" [(ngModel)]="emailid">
+                <div class="column">Email Id:</div>
+                <div class="column kit"><input type="text" formControlName="emailid" [(ngModel)]="emailid">
                     <div class="error" *ngIf="myForm.controls.emailid.touched && !myForm.controls.emailid.valid">
                         Please enter valid email Id</div>
                 </div>
             </div>
             <div class="row">
-                <div class="column">Password</div>
+                <div class="column">Password :</div>
                 <div class="column kit"><input type="text" formControlName="password" [(ngModel)]="password">
                     <div class="error" *ngIf="myForm.controls.password.touched && !myForm.controls.password.valid">
                         Please enter password</div>
@@ -21,6 +20,10 @@
             </div>
             <div class="content">
                 <button  class="bun" type="submit" [disabled]="!myForm.valid">Login</button>
+                <p class="forget"><a href="">Forget Password..?</a></p>
+            </div>
+            <div>
+                <p class="reglink">Don't have Login credentials...?<a href="/registration">Click here</a></p>
             </div>
         </div>
         </form>
