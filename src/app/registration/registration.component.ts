@@ -32,8 +32,11 @@ export class RegistrationComponent implements OnInit {
   }
   onSubmit() {
     if(this.password!=this.conpassword){
-    this.message="password not match";
-    }else
+      this.message="password not match";
+      setTimeout(()=>{
+        this.message="";
+      },3000)
+    } else
 alert('Submitted');
   }
 }

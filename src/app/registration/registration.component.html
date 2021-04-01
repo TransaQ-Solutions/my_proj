@@ -23,7 +23,10 @@
           
           <div class="row">
               <div class="column">Password</div>
-              <div class="column kit" ><input type="text" formControlName="password"  [(ngModel)]="password" >
+              <div class="column kit" ><input type="password" formControlName="password"  [(ngModel)]="password" id="inputpass">
+                <div class="show">
+                  <input type="checkbox" onclick="myFunction()">Show Password
+                  </div>
                 <div class="error" *ngIf="myForm.controls.password.touched && !myForm.controls.password.valid">please enter Password</div>
               </div>
               <!-- <div class="error" *ngIf="myForm.controls.password.minlength">min length is req</div> -->
@@ -32,7 +35,11 @@
            <div class="row">
             <div class="column">Confirm Password</div>
             <div class="column kit">
-              <input type="text" formControlName="conpassword"  [(ngModel)]="conpassword" >
+              <input type="password" formControlName="conpassword"  [(ngModel)]="conpassword"  id="conpass">
+              <div class="show">
+                <input type="checkbox" onclick="conpass12()">Show Password
+                </div>
+
               <div class="error" *ngIf="myForm.controls.conpassword.touched && !myForm.controls.conpassword.valid">please enter Password</div>
               <p class="error">{{message}}</p> 
             </div>
