@@ -24,7 +24,18 @@ export class LoginComponent implements OnInit {
   }
  
 onSubmit(){
-  alert('login succesful');
+    sessionStorage.setItem("username","manjunath@gmail.com");
+    sessionStorage.setItem("userpw","manju@3");
+    var user1=sessionStorage.getItem("username");
+    var pw1=sessionStorage.getItem("userpw");
+    var user=this.emailid;
+    var pw=this.password;
+    if((user1==user) && (pw1==pw)){
+      alert('login succesful');
+    }
+    else{
+    alert('Login Unsuccesful');
+    }
 }
 
 }
