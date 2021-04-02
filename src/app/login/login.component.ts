@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   myForm: FormGroup;
   emailid:any;
   password:any;
+ 
 
   constructor(private fb: FormBuilder) {}
 
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
       password: ['',[Validators.required,Validators.minLength(3)]]
     })
   }
+ 
 onSubmit(){
   alert('login succesful');
 }
