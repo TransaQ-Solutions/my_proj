@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -31,9 +33,13 @@ onSubmit(){
     var user=this.emailid;
     var pw=this.password;
     if((user1==user) && (pw1==pw)){
-      location :'./login/login.component';
+        var landingUrl = "/hero";
+        window.location.href = landingUrl;
+        alert("log in Successful");
+      
     }
-    else{
+    else
+    {
     alert('Login Unsuccesful');
     }
 }
