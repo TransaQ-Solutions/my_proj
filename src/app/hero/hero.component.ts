@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
-
-  constructor() { }
+  name: string;
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
+    
   }
+  
 
 }

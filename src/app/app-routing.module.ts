@@ -5,7 +5,7 @@ import {HeroComponent } from './hero/hero.component'
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'hero', component: HeroComponent}
+ // {path: 'hero', component: HeroComponent}
 ];
 
 @NgModule({

@@ -33,8 +33,8 @@ onSubmit(){
     var user=this.emailid;
     var pw=this.password;
     if((user1==user) && (pw1==pw)){
-        var landingUrl = "/hero";
-        window.location.href = landingUrl;
+        //var landingUrl = "/hero";
+       // window.location.href = landingUrl;
         alert("log in Successful");
       
     }
