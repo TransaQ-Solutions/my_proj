@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators,FormGroupDirective } from '@angular/forms';
 // import { ConfirmedValidator } from './confirmed.validator';
 @Component({
   selector: 'app-registration',
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-  
+  // touched=false;
   myForm: FormGroup;
   firstname: any;
   lastname: any;
@@ -17,7 +17,8 @@ export class RegistrationComponent implements OnInit {
   mobile:number;
   message = '';
   user:any={};
-  
+
+   @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
   
 
   constructor(private fb: FormBuilder) { }
@@ -40,9 +41,12 @@ export class RegistrationComponent implements OnInit {
     this.user =Object.assign(this.user,this.myForm.value); 
 this.addUser(this.user);
 // console.log(JSON.stringify(this.password));
-    alert("submitted");
-    this.myForm.reset();
-    this.myForm.markAsUntouched();
+
+   alert("submitted");
+    
+    
+    // this.myForm.markAsUntouched();
+    // window.location.reload()
     }
   }
 addUser(user){
@@ -54,7 +58,9 @@ let users =[];
     users=[user];
   }
   localStorage.setItem('Users', JSON.stringify(users));
+  this.formGroupDirective.resetForm();
 }
+
 valid(){
   console.log("check the confirm");
   if (this.password != this.conpass) {
@@ -63,5 +69,9 @@ valid(){
 this.message="";
   }
 }
+
+// buttonClick(){
+//   this.form.onSubmit.emit();
+// }
 }
 

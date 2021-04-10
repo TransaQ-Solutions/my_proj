@@ -1,6 +1,7 @@
 <p>registration works!</p>
 <div class="sample1">
-<form [formGroup]="myForm" (ngSubmit)="myForm.valid && onSubmit()" noval>
+  <h1>Registration </h1>
+<form  #form="ngForm" [formGroup]="myForm" (ngSubmit)="myForm.valid && onSubmit()" novalidate >
 <div class="example-container">
   <div>
     <mat-form-field>
@@ -59,7 +60,7 @@
     
       
   </div> 
-  <button type="submit"  [disabled]="!myForm.valid" mat-raised-button color="primary"> Register</button>
-
+  <button type="submit" routerLink="/registration"  [disabled]="!myForm.valid" mat-raised-button color="primary"> Register</button>
+  <!-- <button  routerLink="/login" mat-raised-button color="primary"> Login</button> -->
 </form>
 </div>
